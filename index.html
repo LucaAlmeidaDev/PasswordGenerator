@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Random Password Generator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" type="image/x-icon" href="lock-password-line.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="md:w-10/12 m-auto flex flex-col">
+    <div class="flex select-none m-auto text-2xl p-10">
+        <p>Random</p>
+        <p class="text-green-500">‎<i class="ri-lock-password-line"></i> ‎</p>
+        <p>Generator</p>
+    </div>
+     
+    <div class="flex m-auto md:mt-56 mt-40">
+        <div>
+            <details className="flex w-full h-8 open:w-full z-10">
+            <summary class="text-xl w-32 font-semibold cursor-pointer select-none items-center justify-center flex h-10 bg-blue-400 text-white text-base hover:bg-sky-300 transition-all duration-300 text-sm ">
+                <i class="ri-filter-fill">Filters</i>
+            </summary>  
+            <div class="flex flex-col"> 
+                <label>Password Lenght</label>
+                <div class="flex">
+                    <input id="passwordSize" type="range" min="0" max="30" value="7" step="1" />
+                    <label for="passwordSize"></label>
+                </div>
+            </div>
+            <div className='flex flex-col'>
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Numbers</label>
+            </div>
+            <div className='flex flex-col'>
+                <input type="checkbox" id="special">
+                <label for="special">Special Characters</label>
+            </div>
+            <div className='flex flex-col'>
+                <input type="checkbox" id="upperCase">
+                <label for="passwordSize">UpperCase</label>
+            </div>
+            <div className='flex flex-col'>
+                <input type="checkbox" id="lowerCase">
+                <label for="passwordSize">LowerCase</label>
+            </div>
+           
+            </details>  
+        </div>  
+        <div class="bg-slate-200 w-40 md:w-96 h-10 flex items-center justify-between"><p id="passwordText" class="ml-2"></p><btn class="mr-4 hover:text-green-500 transition-all duration-300 text-xl"><i class="ri-clipboard-line"></i></btn></div>
+        <btn id="generateBtn" class="cursor-pointer select-none w-32 items-center justify-center flex h-10 bg-green-400 text-white text-base hover:bg-green-300 transition-all duration-300 ">Generate</btn>
+    </div>
+ 
+    <div class='flex flex-col gap-2 items-center absolute bottom-0 left-0 right-0 mb-6'> 
+        <div class='flex'>
+            <a class='transition-all text-3xl hover:text-green-500 hover:translate-y-1 hover:scale-125' target='_blank' href='https://www.linkedin.com/in/lucas-almeida-52b64522b'><i class="ri-linkedin-box-fill"></i></a>
+            <a class='transition-all text-3xl hover:text-green-500 hover:translate-y-1 hover:scale-125' target='_blank' href='https://github.com/LucaAlmeidaDev'><i class="ri-github-fill"></i></a>
+            <a class='transition-all text-3xl hover:text-green-500 hover:translate-y-1 hover:scale-125' target='_blank' href='https://www.instagram.com/lucasalmeida86355/'><i class="ri-instagram-fill"></i></a>
+        </div>
+        <p class='select-none'>Lucas Almeida ©2024</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src='script.js'></script>
+</body>
+</html>

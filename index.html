@@ -19,15 +19,15 @@
          
         <div class="flex flex-col-reverse md:flex-row m-auto md:mt-56 mt-40">
             <div>
-                <details className="flex w-full h-8 open:w-full z-10">
+                <details className="flex w-full h-8 open:w-full z-10" open>
                 <summary class="text-xl md:w-56 w-96 font-semibold cursor-pointer select-none items-center justify-center flex h-10 bg-blue-400 text-white text-base hover:bg-sky-300 transition-all duration-300 text-sm ">
                     <i class="ri-filter-fill">Filters</i>
                 </summary>  
                 <div class="flex flex-col bg-blue-400 text-white"> 
                     <label>Password Lenght</label>
                     <div class="flex gap-2">
-                        <input id="passwordSize" type="range" min="1" max="30" value="30" step="1"/>
-                        <label id="passwordSizeLabel" for="passwordSize">30</label>
+                        <input id="passwordSize" type="range" min="1" max="30" value="1" step="1"/>
+                        <label id="passwordSizeLabel" for="passwordSize">1</label>
                     </div>
                 </div>
                 <div class='flex bg-blue-400 text-white gap-2'>
@@ -49,7 +49,7 @@
                
                 </details>  
             </div>  
-            <div class="bg-slate-200 w-96 h-10 flex items-center justify-between"><p id="passwordText" class="ml-2"></p><btn class="mr-4 hover:text-green-500 transition-all duration-300 text-xl"><i class="ri-clipboard-line"></i></btn></div>
+            <div class="bg-slate-200 w-96 h-10 flex items-center justify-between"><p id="passwordText" class="ml-2"></p><btn id="Copy" class="mr-4 hover:text-green-500 transition-all duration-300 text-xl"><i class="ri-clipboard-line"></i></btn></div>
             <btn id="generateBtn" class="cursor-pointer select-none md:w-32 w-96 items-center justify-center flex h-10 bg-green-400 text-white text-base hover:bg-green-300 transition-all duration-300 ">Generate</btn>
         </div>
      
@@ -73,6 +73,6 @@
 
 
 
-    <script src='script.js'></script>
+    <script src='script.js'></script>   
 </body>
 </html>
